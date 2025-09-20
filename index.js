@@ -1,3 +1,19 @@
+const express = require('express');
+const app = express();
+
+app.use(express.static('public')); 
+
+app.get('/', (req, res) => {
+});
+const port = 3000;
+app.listen(port, () => {
+  console.log(`Servidor rodando em http://localhost:${port}`);
+});
+
+
+
+
+
 import express from "express";
 
 import { fileURLToPath } from "url";
