@@ -22,6 +22,7 @@ h1{
     text-align: center;
     font-family: 'Playfair Display', serif;
     color: blueviolet;
+    text-decoration: underline;
 }
 
 body{
@@ -48,11 +49,13 @@ nav{
     font-size: 18px;
     background-color: rgb(220, 195, 245);
 }
+
 nav:hover{
     color: cornsilk;
     background-color:blueviolet;
     transition: 0.5s;
 }
+
 .banner-title {
   font-family: 'Playfair Display', serif;
   font-size: 28px;
@@ -61,4 +64,56 @@ nav:hover{
   text-align: center;      
   margin: 50px auto;       
   max-width: 600px;        
+}
+
+.banner {
+  background-image: url("C:\Users\biazi\Downloads\Baby Blue Aesthetic Y2K Gradient Heart Quote Phone Wallpaper.png"); 
+  background-size: cover;      
+  background-position: center; 
+  padding: 80px 20px;          
+  text-align: center;          
+  color: white;               
+} 
+
+.banner h2 {
+  font-size: 36px;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.6); /* sombra no texto pra destacar */
+}
+
+.produtos {
+    color: rgb(220, 195, 245);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.btn-comprar {
+    background: linear-gradient(135deg,rgb(220, 195, 245), #50047c);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-comprar:hover {
+  background: linear-gradient(135deg, #702e9a, #c683e0);
+  transform: scale(1.05);
+}
+.produtos-titulo{
+    font-size: 40px;
+    text-align: center;
+    color: cornsilk;
+    font-family: 'Playfair Display', serif;
+    text-decoration: dotted;
 }
