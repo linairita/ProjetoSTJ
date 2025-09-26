@@ -43,6 +43,7 @@ h1{
     flex-wrap: wrap;
     gap: 20px;
     padding: 20px;
+    justify-content: center;
 }
 .nome-produto {
     font-size: 22px;
@@ -69,7 +70,7 @@ h1{
   transform: scale(1.05);
 }
 
-.produtos-titulo{
+.produtos-destaque{
     font-size: 40px;
     text-align: center;
     color: cornsilk;
@@ -102,7 +103,7 @@ footer {
     padding: 20px 0; 
     width: 100%; 
     text-align: center; 
-    margin-top: 50px; 
+  
 }
 
 .github-icon-link i {
