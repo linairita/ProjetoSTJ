@@ -1,8 +1,10 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto&display=swap);
 body{
     background-color: blueviolet;
     color: antiquewhite;
     margin-left: 50px;
     margin-right: 50px;
+    font-family: 'Roboto', sans-serif;
 }
 
 #header{
@@ -17,6 +19,10 @@ body{
 h1{
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     color: antiquewhite;
+}
+
+h2{
+    font-size: 30px;
 }
 
 .logo{

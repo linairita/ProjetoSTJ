@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="/styles/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
 <body>
     <header id="site-header">
         <div class ="logotitulo">
@@ -35,32 +35,74 @@
                 </div>
             </div>
         </section>
+
         <section class = "produtos-destaque">   
             <h3 class = "produtos-titulo">Produtos em Destaque</h3>
             <div class="produtos">
     <div class="card">
-      <img src="https://placehold.co/600x400/D1D5DB/4B5563?text=Produto+1" alt="Produto 1">
-      <h4>Blusa Floral</h4>
+      <img src="https://i.pinimg.com/1200x/5c/d3/1f/5cd31f373a5f0138925e390b9f319bba.jpg" alt="Blusa Floral">
+      <h4 class="nome-produto">Blusa Floral</h4>
       <p>R$ 99,90</p>
       <button class = "btn-comprar">Comprar</button>
     </div>
 
     <div class="card">
-      <img src="https://placehold.co/600x400/D1D5DB/4B5563?text=Produto+2" alt="Produto 2">
-      <h4>Calça Jeans</h4>
+      <img src="https://i.pinimg.com/736x/f8/d2/a1/f8d2a18ef548c2422bf35e847689e562.jpg" alt="Calça Jeans" >
+      <h4 class="nome-produto">Calça Jeans</h4>
       <p>R$ 149,90</p>
       <button class = "btn-comprar">Comprar</button>
     </div>
 
     <div class="card">
-      <img src="https://placehold.co/600x400/D1D5DB/4B5563?text=Produto+3" alt="Produto 3">
-      <h4>Vestido de Verão</h4>
+      <img src="https://i.pinimg.com/736x/fb/ec/b5/fbecb5b47389609e52dcce0deffc6152.jpg" alt="Vestido de Verão" >
+      <h4 class="nome-produto">Vestido de Verão</h4>
       <p>R$ 119,90</p>
       <button class = "btn-comprar">Comprar</button>
     </div>
   </div>
         </section>
+
+        <hr>
+
+        <div class="carrossel">
+            <button id="esquerda">←</button>
+
+            <div class="imagens-carrossel">
+                <img src="/images/verao.jpg" alt="" class="normal">
+                <img src="/images/desconto.jpg" alt="20 por cento de desconto na primeira compra" id="central">
+                <img src="/images/blackf.jpg" alt="" class="normal">
+            </div>
+
+            <button id="direita">→</button>  
+        </div>
+
+        <hr>
+
     </main>
+    <footer>
+    <div class="footer-conteudo">
+        <div class="footer-link">
+            <a ref="index.tml">Página Inicial </a>
+            <a href="sobre.html">Sobre</a>
+            <a href="produtos.html">Produtos</a>
+            <a href="contato.html">Contato</a>
+        </div>
+         <p class="copyright">
+            &copy; Desenvolvido por Beatriz Lina e Beatriz Pereira.
+        </p>
+        <div class="githubs">
+           <a href="https://github.com/linairita" target="_blank" class="github-icon-link">
+    <i class="fab fa-github"></i>
+    </a>
+     <a href="https://github.com/beatrizpsantos22" target="_blank" class="github-icon-link">
+    <i class="fab fa-github"></i>
+    </a>
+        </div>
+</a>
+
+    </div>
+    </footer>
     
+    <script src="/scripts/carrossel.js"></script>
 </body>
 </html>
