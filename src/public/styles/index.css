@@ -1,16 +1,18 @@
 @import url(https://fonts.googleapis.com/css2?family=Roboto&display=swap);
 
-#site-header{
+header{
     display: flex;
     justify-content: center;
     align-items: center;
     padding:10px 20px;
-    background-color: rgb(220, 195, 245) ;
+    background-color:rgb(99, 44, 150) ;
 }
+
 
 .logotitulo{
     display: flex; 
     align-items: center;
+    font-family: 'Playfair Display', serif;
     gap: 15px;
 }
 
@@ -23,21 +25,47 @@
 h1{
     text-align: center;
     font-family: 'Playfair Display', serif;
-    color: blueviolet;
-    text-decoration: underline;
+    color:rgb(209, 183, 233);
 }
 
 body{
-    background-color: blueviolet;
+    background-color: rgb(209, 183, 233);
     justify-content: center;
     margin: 0;
 }
 
 h2{
-    color: antiquewhite;
+    color: rgb(99, 44, 150);
     margin-left: 50px;
     text-align: left;
     font-family: 'Roboto', sans-serif;
+}
+
+#divBusca {
+    margin: 20px auto;
+    width: 300px; 
+    padding: 8px 15px; 
+    border-radius: 25px;
+    background-color:cornsilk;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    display: flex;
+    align-items: center;
+}
+
+#txtBusca {
+    flex-grow: 1;
+    padding: 0;
+    font-size: 16px; 
+    color: #333; 
+    background-color: transparent; 
+    border: none; 
+    outline: none; 
+}
+
+#txtBusca::placeholder {
+    color: #999;
+    font-weight: 300; 
 }
 
 nav{
@@ -55,9 +83,10 @@ nav{
 
 nav:hover{
     color: cornsilk;
-    background-color:blueviolet;
+    background-color:rgb(99, 44, 150);
     transition: 0.5s;
 }
+
 
 .banner-title {
     font-family: 'Playfair Display', serif;
@@ -95,18 +124,23 @@ nav:hover{
     border: 4px solid #decfeb;
 }
 
-.banner {
-  background-image: url("C:\Users\biazi\Downloads\Baby Blue Aesthetic Y2K Gradient Heart Quote Phone Wallpaper.png"); 
-  background-size: cover;      
-  background-position: center; 
-  padding: 80px 20px;          
-  text-align: center;          
-  color: white;               
-} 
+.titulo-banner{
+    font-size: 45px;
+    text-align: left;
+    color: rgb(99, 44, 150);
+    font-family: limelight-regular, sans-serif;
+    transition: all 0.3s ease;
+}
+
+.titulo-banner:hover {
+  transform: translateY(-15px);
+}
 
 .banner h2 {
-  font-size: 36px;
+  font-size: 25px;
   text-shadow: 2px 2px 6px rgba(0,0,0,0.6); 
+  color: rgb(99, 44, 150);
+  text-align:right;
 }
 
 .produtos {
@@ -120,12 +154,14 @@ nav:hover{
     padding: 20px;
     text-align: center;
 }
+
 .nome-produto {
     font-size: 22px;
     color: #c0bbc4;
     margin: 10px 0 5px 0;
     font-weight: bold;
 }
+
 .btn-comprar {
     background: linear-gradient(135deg,rgb(220, 195, 245), #50047c);
     border: none;
@@ -148,7 +184,7 @@ nav:hover{
 .produtos-titulo{
     font-size: 40px;
     text-align: center;
-    color: cornsilk;
+    color: rgb(46, 4, 88);
     font-family: 'Playfair Display', serif;
     text-decoration: dotted;
 }
@@ -173,13 +209,21 @@ nav:hover{
 }
 
 footer {
-    background-color: rgb(46, 4, 88); 
+    background-color: rgb(99, 44, 150);
     color: cornsilk; 
     padding: 20px 0; 
     width: 100%; 
     text-align: center; 
     margin-top: 50px; 
     gap: 15px;
+}
+
+.footer-link {
+    display: flex;
+    color: cornsilk;
+    justify-content: center;
+    gap: 20px; 
+    margin-bottom: 10px; 
 }
 
 .github-icon-link i {

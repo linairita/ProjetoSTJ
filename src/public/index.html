@@ -8,6 +8,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Limelight&display=swap" rel="stylesheet">
+     <title>Barra de Pesquisa</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -17,16 +22,25 @@
             <h1>Open Closet</h1>
         </div>
     </header>
+    
     <main>
           <nav>
         
             <a href="sobre.html">Sobre</a>
+            <a href="index.html">Página Inicial </a>
             <a href="produtos.html">Produtos</a>
-            <a href="contato.html">Contato</a>
+            <a href="contato.html">Contato</a>   
     
     </nav>
+    <div id="divBusca">
+       <input type="text" id="txtBusca" placeholder="Buscar..."/>
+       <button id="btnBusca">🔍</button>
+    </div>
+
+    <script src="script.js"></script>
         <section class="banner">
             <div class="banner-title">
+                <h1 class = "titulo-banner">Bem-vindo <br> à Open Closet ✨</h1>
                 <h2>O melhor da moda, <br>com o melhor preço.</h2>
             </div>
             <div class="banner-action">
@@ -37,11 +51,11 @@
         </section>
 
         <section class = "produtos-destaque">   
-            <h3 class = "produtos-titulo">Produtos em Destaque</h3>
+            <h3 class = "produtos-titulo">PRODUTOS EM DESTAQUE</h3>
             <div class="produtos">
     <div class="card">
       <img src="https://i.pinimg.com/1200x/5c/d3/1f/5cd31f373a5f0138925e390b9f319bba.jpg" alt="Blusa Floral">
-      <h4 class="nome-produto">Blusa Floral</h4>
+      <h4 id="1" class="nome-produto">Blusa Floral</h4>
       <p>R$ 99,90</p>
       <button class = "btn-comprar">Comprar</button>
     </div>
