@@ -87,6 +87,14 @@ nav:hover{
     transition: 0.5s;
 }
 
+nav a{
+    color: #50047c;
+}
+
+nav a:hover{
+    color: rgb(220, 195, 245);
+}
+
 
 .banner-title {
     font-family: 'Playfair Display', serif;
@@ -224,6 +232,14 @@ footer {
     justify-content: center;
     gap: 20px; 
     margin-bottom: 10px; 
+}
+
+.footer-link a{
+    color: cornsilk;
+}
+
+.footer-link a:hover{
+    color: #c683e0;
 }
 
 .github-icon-link i {
