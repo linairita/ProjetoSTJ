@@ -1,4 +1,3 @@
-// A CONSTANTE DE DADOS ATUALIZADA com todos os produtos
 const dados = [
 
     { categoria: "Vestidos", nome: "Vestido com Babados", preco: 109.99, imagem: "https://i.pinimg.com/1200x/b9/20/89/b92089b279f5dae884e97f4364e9573f.jpg" },
@@ -29,9 +28,14 @@ const formatarPreco = (preco) => {
 };
 
 function buscar() {
-    const termoBusca = input.value.toLowerCase();
+    if (!input) return;
+    const termoBusca = input.value.trim().toLowerCase();
+    if (termoBusca === '') {
+        exibirResultados(dados);
+        return;
+    }
     const resultados = dados.filter(item => {
-     return item.nome && item.nome.toLowerCase().includes(termoBusca);
+        return item.nome && item.nome.toLowerCase().includes(termoBusca);
     });
 
     exibirResultados(resultados);
@@ -57,8 +61,80 @@ function exibirResultados(resultados) {
         lista.appendChild(li);
     });
 }
-if (input) {
-    input.addEventListener('keyup', buscar);
+function initBusca() {
+    if (!input || !lista) return;
+
+    const container = input.closest('.barra-busca');
+    const btn = container ? container.querySelector('button') : null;
+
+   
+    if (container) {
+        container.classList.add('collapsed');
+        container.setAttribute('aria-expanded', 'false');
+    }
+
+    function abrirBusca() {
+        if (!container) return;
+        container.classList.remove('collapsed');
+        container.setAttribute('aria-expanded', 'true');
+        input.focus();
+    }
+
+    function fecharBusca() {
+        if (!container) return;
+        if (input.value.trim() === '') {
+            container.classList.add('collapsed');
+            lista.innerHTML = '';
+            container.setAttribute('aria-expanded', 'false');
+        }
+    }
+
+    if (btn) {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            if (container.classList.contains('collapsed')) abrirBusca();
+            else {
+                
+                if (input.value.trim() === '') fecharBusca();
+                else buscar();
+            }
+        });
+    }
+
+    
+    if (container) {
+        container.addEventListener('click', (e) => {
+            const clickedButton = e.target.closest('button');
+            if (clickedButton) return;
+            if (container.classList.contains('collapsed')) {
+                abrirBusca();
+            }
+        });
+    }
+
+    input.addEventListener('input', () => {
+        const termo = input.value.trim();
+        if (termo === '') {
+            lista.innerHTML = '';
+            return;
+        }
+        buscar();
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!container) return;
+        if (!container.contains(e.target)) fecharBusca();
+    });
+
+   
+    input.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') e.preventDefault();
+    });
+
 }
 
-exibirResultados(dados);
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initBusca);
+} else {
+    initBusca();
+}

@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produtos</title>
-    <link rel="stylesheet" href="/styles/produtos.css">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Produtos</title>
+   <link rel="stylesheet" href="/styles/produtos.css">
+   <link rel="stylesheet" href="/styles/index.css">
+   <link rel="icon" href="/images/logo.png" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
     <header id="header">
         <img src="/images/logo.png" alt="logo da lojinha" class="logo">
         <h1>Nossas Roupas</h1>
     </header> 
+  <div class="cart-wrap">
+    <button id="cartButton" aria-label="Abrir carrinho">
+      <i class="fa fa-shopping-cart"></i>
+      <span id="cartCount" class="cart-count" aria-hidden="true">0</span>
+    </button>
+  </div>
     <nav>
         
             <a href="sobre.html">Sobre</a>
@@ -20,7 +28,12 @@
             <a href="contato.html">Contato</a>   
     
     </nav>
-     
+    <div id="divBusca" class="barra-busca">
+       <input type="text" id="barraDeBusca" placeholder="Buscar produtos..." aria-label="Buscar produtos"/>
+       <button id="btnBusca">🔍</button>
+       <ul id="listaDeResultados" class="result-list" aria-live="polite"></ul>
+    </div>
+
     <section class = "roupas">   
             <h3 class = "titulo">Vestidos</h3>
             <div class="produtos">
@@ -165,12 +178,13 @@
      <a href="https://github.com/beatrizpsantos22" target="_blank" class="github-icon-link">
     <i class="fab fa-github"></i>
     </a>
-        </div>
-</a>
-
     </div>
-    </footer>
 
+  </div>
+  </footer>
+
+  <script src="/scripts/busca.js"></script>
+  <script src="/scripts/cart.js"></script>
 </body>
 
 </html>

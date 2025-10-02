@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="/styles/index.css">
+    <link rel="icon" href="/images/logo.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -21,6 +22,12 @@
             <img src="/images/logo.png" alt="logo da lojinha" class="logo">
             <h1>Open Closet</h1>
         </div>
+        <div class="cart-wrap">
+            <button id="cartButton" aria-label="Abrir carrinho">
+                <i class="fa fa-shopping-cart"></i>
+                <span id="cartCount" class="cart-count" aria-hidden="true">0</span>
+            </button>
+        </div>
     </header>
     
     <main>
@@ -32,12 +39,13 @@
             <a href="contato.html">Contato</a>   
     
     </nav>
-    <div id="divBusca">
-       <input type="text" id="txtBusca" placeholder="Buscar..."/>
-       <button id="btnBusca">🔍</button>
-    </div>
+     <div id="divBusca" class="barra-busca">
+         <input type="text" id="barraDeBusca" placeholder="Buscar produtos..." aria-label="Buscar produtos"/>
+         <button id="btnBusca">🔍</button>
+         <ul id="listaDeResultados" class="result-list" aria-live="polite"></ul>
+     </div>
 
-    <script src="script.js"></script>
+     <script src="/scripts/busca.js"></script>
         <section class="banner">
             <div class="banner-title">
                 <h1 class = "titulo-banner">Bem-vindo <br> à Open Closet ✨</h1>
@@ -118,5 +126,6 @@
     </footer>
     
     <script src="/scripts/carrossel.js"></script>
+    <script src="/scripts/cart.js"></script>
 </body>
 </html>
